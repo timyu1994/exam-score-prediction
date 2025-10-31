@@ -8,7 +8,7 @@ timyu@hotmail.com<br>
 # Folder Structure
 ```
 exam_score_prediction
-├── src
+├── scripts
     ├── main.py
     └── utils.py    
 ├── config.yml
