@@ -23,24 +23,24 @@ To easily experiment with different algorithms and parameters, and different way
 2. Edit the parameters in the *.yml config file (if necessary). 
 
 The configurable parameters are as follows:
-- data_path: Path to database file
-- model: Model to use, available choices are ['lasso', 'ridge', 'linearsvc', 'kneighborsclassifier']
-- random_seed: Seed value for [np.random.seed](https://numpy.org/doc/stable/reference/random/generated/numpy.random.seed.html) and [sklearn.model_selection.train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) for reproducibility
-- test_size: Test size during train-test split, float between 0.0 and 1.0 for dataset proportion or integer for absolute number of test samples
-- shuffle: Whether to shuffle dataset during training
-- cross_val_num: Number of folds during cross-validation
-- lasso__alpha: Constant that multiplies the L1 term for the [Lasso regression model](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html) (NOTE: scientific notation needs a decimal point to be loaded correctly by PyYAML, e.g. 1.e-5 instead of 1e-5)
-- ridge__alpha: Regularisation strength for the [Ridge regression model](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html) (NOTE: scientific notation needs a decimal point to be loaded correctly by PyYAML, e.g. 1.e-5 instead of 1e-5)
-- linearsvc__loss: Loss function for [Linear Support Vector Classification](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
-- linearsvc__C: Regularization parameter for [Linear Support Vector Classification](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
-- kneighborsclassifier__n_neighbors: Number of neighbors to use for [k-Nearest Neighbors vote classifier](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
-- kneighborsclassifier__weights: Weight function for [k-Nearest Neighbors vote classifier](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
+- <b>data_path:</b> Path to database file
+- <b>model:</b> Model to use, available choices are ['lasso', 'ridge', 'linearsvc', 'kneighborsclassifier']
+- <b>random_seed:</b> Seed value for [np.random.seed](https://numpy.org/doc/stable/reference/random/generated/numpy.random.seed.html) and [sklearn.model_selection.train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) for reproducibility
+- <b>test_size:</b> Test size during train-test split, float between 0.0 and 1.0 for dataset proportion or integer for absolute number of test samples
+- <b>shuffle:</b> Whether to shuffle dataset during training
+- <b>cross_val_num:</b> Number of folds during cross-validation
+- <b>lasso__alpha:</b> Constant that multiplies the L1 term for the [Lasso regression model](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html) (NOTE: scientific notation needs a decimal point to be loaded correctly by PyYAML, e.g. 1.e-5 instead of 1e-5)
+- <b>ridge__alpha:</b> Regularisation strength for the [Ridge regression model](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html) (NOTE: scientific notation needs a decimal point to be loaded correctly by PyYAML, e.g. 1.e-5 instead of 1e-5)
+- <b>linearsvc__loss:</b> Loss function for [Linear Support Vector Classification](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
+- <b>linearsvc__C:</b> Regularization parameter for [Linear Support Vector Classification](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
+- <b>kneighborsclassifier__n_neighbors:</b> Number of neighbors to use for [k-Nearest Neighbors vote classifier](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
+- <b>kneighborsclassifier__weights:</b> Weight function for [k-Nearest Neighbors vote classifier](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
 
-- drop_dup: Option whether to drop duplicate rows based on 'student_id' which is the only variable with unique values.
-- cols_to_drop: Choose columns to drop based on individual requirements. All columns are available including possible synthetic columns.
-- numerical_features: Features that are represented only by numbers like floating-point values and integers. Available choices are ['number_of_siblings', 'n_male', 'n_female', 'hours_per_week', 'attendance_rate', 'sleep_hours', 'sleep_time', 'wake_time']
-- categorical_features: Features that are made of label values rather than actual numeric values. Available choices are ['CCA', 'gender', 'mode_of_transport']
-- binary_features: Similar to categorical features but with only 2 label values. Available choices are ['direct_admission', 'learning_style', 'tuition']
+- <b>drop_dup:</b> Option whether to drop duplicate rows based on 'student_id' which is the only variable with unique values.
+- <b>cols_to_drop:</b> Choose columns to drop based on individual requirements. All columns are available including possible synthetic columns.
+- <b>numerical_features:</b> Features that are represented only by numbers like floating-point values and integers. Available choices are ['number_of_siblings', 'n_male', 'n_female', 'hours_per_week', 'attendance_rate', 'sleep_hours', 'sleep_time', 'wake_time']
+- <b>categorical_features:</b> Features that are made of label values rather than actual numeric values. Available choices are ['CCA', 'gender', 'mode_of_transport']
+- <b>binary_features:</b> Similar to categorical features but with only 2 label values. Available choices are ['direct_admission', 'learning_style', 'tuition']
 
 ## Data Processing
 ### Exploratory Data Analysis (EDA)
