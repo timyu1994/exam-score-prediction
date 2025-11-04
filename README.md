@@ -3,7 +3,7 @@
 ## Folder Structure
 ```
 exam_score_prediction
-├── scripts
+├── src
     ├── main.py
     └── utils.py    
 ├── config.yml
